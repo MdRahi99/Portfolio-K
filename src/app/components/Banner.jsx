@@ -1,0 +1,47 @@
+import { Preahvihear, Poppins } from 'next/font/google';
+import Image from 'next/image';
+import logo from '../../../public/banner_logo.png';
+import Link from 'next/link';
+
+const preahvihear = Preahvihear({
+    weight: ['400'],
+    subsets: ['latin'],
+    display: 'swap'
+})
+const poppins = Poppins({
+    weight: ['400', '500', '700'],
+    subsets: ['latin'],
+    display: 'swap'
+})
+
+
+const Banner = () => {
+    return (
+        <>
+            <div className='p-16 w-full lg:w-3/5 mx-auto text-white mt-12'>
+                <div className='flex flex-col gap-8'>
+                    <h1 className={`${preahvihear.className} text-3xl lg:text-left text-center`}>Khadija Tut Tahera</h1>
+                    <div className='flex items-center lg:justify-start justify-center gap-2'>
+                        <h3 className={`${poppins.className} text-2xl`}>UI/UX Designer</h3>
+                        <Image
+                            className='mt-5'
+                            src={logo}
+                            alt='Banner Logo'
+                            height='48'
+                            width='48' />
+                    </div>
+                    <p className={`${poppins.className} text-[#D3D6DA] text-justify`}>Hey! I am khadija Tut Tahera. Professional UI/UX designer. Expert in visual Design, Wireframing and prototyping, High Fidelity Design.</p>
+                </div>
+                <div className='w-full flex items-center gap-6 mt-10'>
+                    <Link href='/contact'
+                    className={`flex p-2 border-2 border-[#FF6464] w-1/2 justify-center bg-[#FF6464] hover:bg-[#f29494] hover:border-[#f29494] text-white ${poppins.className}`} >
+                        Hire Me
+                    </Link>
+                    <button className={`flex p-2 w-1/2 justify-center border-2 hover:bg-[#FF6464] hover:border-[#FF6464] border-white text-white ${poppins.className}`}>Download CV</button>
+                </div>
+            </div>
+        </>
+    );
+};
+
+export default Banner;

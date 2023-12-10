@@ -20,10 +20,10 @@ const Header = () => {
                         </div>
                         <div className="flex-none hidden lg:block">
                             <h1 className='text-2xl font-bold ml-6 mb-4'>Khadija Tut Tahera</h1>
-                            <ul className="menu menu-vertical">
+                            <ul className="menu flex gap-2 menu-vertical">
                                 <li><Link href='/'>Home</Link></li>
                                 <li><Link href='/projects'>Projects</Link></li>
-                                <li><Link href='/work-process'>Work Process</Link></li>
+                                <li><Link href='/process'>Work Process</Link></li>
                                 <li><Link href='/expertise'>Expertise</Link></li>
                                 <li><Link href='/contact'>Contact</Link></li>
                             </ul>
@@ -39,10 +39,10 @@ const Header = () => {
                 </div>
                 <div className="drawer-side">
                     <label htmlFor="my-drawer-3" aria-label="close sidebar" className="drawer-overlay"></label>
-                    <ul className="menu p-4 w-80 h-96 pt-12 bg-base-200">
+                    <ul className="menu p-4 flex gap-2 w-80 h-96 pt-12 bg-base-200">
                         <li><Link href='/'>Home</Link></li>
                         <li><Link href='/projects'>Projects</Link></li>
-                        <li><Link href='/work-process'>Work Process</Link></li>
+                        <li><Link href='/process'>Work Process</Link></li>
                         <li><Link href='/expertise'>Expertise</Link></li>
                         <li><Link href='/contact'>Contact</Link></li>
                         <div className='flex items-center gap-8 ml-4 mt-6'>

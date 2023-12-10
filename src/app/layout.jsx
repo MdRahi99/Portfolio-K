@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
           <div className='w-full lg:w-9/12 min-h-screen'>
             {children}
           </div>
-          <div className='w-full lg:w-3/12 h-96 lg:shadow-lg lg:p-4 lg:shadow-sky-300 fixed right-8 z-50'>
+          <div className='w-full lg:w-3/12 h-96 lg:shadow-lg lg:p-4 lg:shadow-sky-300 fixed right-8 lg:top-24 z-50'>
             <Header />
           </div>
         </div>
