@@ -32,7 +32,7 @@ const Banner = () => {
                     </div>
                     <p className={`${poppins.className} text-[#D3D6DA] text-justify`}>Hey! I am khadija Tut Tahera. Professional UI/UX designer. Expert in visual Design, Wireframing and prototyping, High Fidelity Design.</p>
                 </div>
-                <div className='w-full flex items-center gap-6 mt-10'>
+                <div className='w-full flex items-center gap-3 lg:gap-6 mt-10'>
                     <Link href='/contact'
                     className={`flex p-2 border-2 border-[#FF6464] w-1/2 justify-center bg-[#FF6464] hover:bg-[#f29494] hover:border-[#f29494] text-white ${poppins.className}`} >
                         Hire Me
