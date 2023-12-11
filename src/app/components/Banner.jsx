@@ -18,7 +18,7 @@ const poppins = Poppins({
 const Banner = () => {
     return (
         <>
-            <div className='p-16 w-full lg:w-3/5 mx-auto text-white mt-12'>
+            <div className='py-20 px-8 lg:px-24 text-white my-12'>
                 <div className='flex flex-col gap-8'>
                     <h1 className={`${preahvihear.className} text-3xl lg:text-left text-center`}>Khadija Tut Tahera</h1>
                     <div className='flex items-center lg:justify-start justify-center gap-2'>
