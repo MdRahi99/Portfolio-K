@@ -65,6 +65,7 @@ const allCategories = ['All', ...uniqueCategories];
 const Projects = () => {
 
     const [selectedCategory, setSelectedCategory] = useState('All');
+    const [loading, setLoading] = useState(false);
 
     const filteredProjects =
         selectedCategory === 'All'
@@ -82,13 +83,15 @@ const Projects = () => {
                                 key={index}
                                 data={data}
                                 setSelectedCategory={setSelectedCategory}
+                                setLoading={setLoading}
                             />
                         })
                     }
                 </div>
 
                 <ProjectsList
-                    filteredProjects={filteredProjects} />
+                    filteredProjects={filteredProjects}
+                    loading={loading} />
             </div>
         </>
     );
