@@ -13,48 +13,57 @@ const poppins = Poppins({
 const projects = [
     {
         _id: 1,
-        title: 'Case Study 1',
-        category: 'Case Study'
+        title: 'Fresh Leaf',
+        category: 'Case Study',
+        img: '/fresh-leaf.jpg'
     },
     {
         _id: 2,
         title: 'Case Study 2',
-        category: 'Case Study'
+        category: 'Case Study',
+        img: '/fresh-leaf.jpg'
     },
     {
         _id: 3,
         title: 'Case Study 3',
-        category: 'Case Study'
+        category: 'Case Study',
+        img: '/fresh-leaf.jpg'
     },
     {
         _id: 4,
         title: 'Web Ui 1',
-        category: 'Web'
+        category: 'Web',
+        img: '/fresh-leaf.jpg'
     },
     {
         _id: 5,
         title: 'Web Ui 2',
-        category: 'Web'
+        category: 'Web',
+        img: '/fresh-leaf.jpg'
     },
     {
         _id: 6,
         title: 'Web Ui 3',
-        category: 'Web'
+        category: 'Web',
+        img: '/fresh-leaf.jpg'
     },
     {
         _id: 7,
-        title: 'App Ui 1',
-        category: 'App'
+        title: 'Food App',
+        category: 'App',
+        img: '/food-app.jpg'
     },
     {
         _id: 8,
         title: 'App Ui 2',
-        category: 'App'
+        category: 'App',
+        img: '/fresh-leaf.jpg'
     },
     {
         _id: 9,
         title: 'App Ui 3',
-        category: 'App'
+        category: 'App',
+        img: '/fresh-leaf.jpg'
     },
 ]
 
