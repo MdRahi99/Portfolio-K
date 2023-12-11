@@ -8,10 +8,10 @@ export default function Home() {
   return (
     <div className='divide-y-2'>
       <Banner />
-      {/* <Projects /> */}
+      <Projects />
       <Process />
       <Expertise />
-      {/* <Contact /> */}
+      <Contact />
     </div>
   )
 }

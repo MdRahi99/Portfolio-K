@@ -1,7 +1,17 @@
+import { Poppins } from 'next/font/google';
+
+const poppins = Poppins({
+    weight: ['600'],
+    subsets: ['latin'],
+    display: 'swap'
+})
+
 const Projects = () => {
     return (
         <>
-           <h1>This is Projects Page</h1> 
+            <div className='py-20 px-8 lg:px-24 text-white'>
+                <h1 className={`text-2xl text-center lg:text-left ${poppins.className}`}>Projects</h1>
+            </div>
         </>
     );
 };
