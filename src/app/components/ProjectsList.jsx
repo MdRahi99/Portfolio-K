@@ -1,13 +1,13 @@
 import Image from "next/image";
-import Loader from "./Loader";
 import Link from "next/link";
+import Loading from "../loading";
 
 const ProjectsList = ({ filteredProjects, loading }) => {
     return (
         <div>
             {
                 loading ?
-                    <Loader />
+                    <Loading />
                     :
                     <div className='grid grid-cols-1 lg:grid-cols-3 gap-8 p-10 lg:p-0'>
                         {filteredProjects.map(project => {
