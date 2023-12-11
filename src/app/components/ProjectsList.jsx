@@ -9,11 +9,11 @@ const ProjectsList = ({ filteredProjects, loading }) => {
                 loading ?
                     <Loader />
                     :
-                    <div className='grid grid-cols-2 lg:grid-cols-3 gap-8'>
+                    <div className='grid grid-cols-1 lg:grid-cols-3 gap-8 p-10 lg:p-0'>
                         {filteredProjects.map(project => {
                             const { _id, title, img } = project;
-                            return <div key={_id} className="shadow-2xl shadow-sky-300">
-                                <div className='h-48 lg:h-56 w-full hover:opacity-30'>
+                            return <div key={_id} className="shadow-2xl shadow-sky-300 rounded-br-3xl rounded-tl-3xl">
+                                <div className='h-52 w-full hover:opacity-30'>
                                     <Link href='https://www.behance.net/gallery/183954903/Restaurant-FOOD-APP-UI'>
                                         <Image
                                             className='rounded-tl-3xl h-full w-full'
