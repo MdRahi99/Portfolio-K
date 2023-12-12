@@ -1,7 +1,7 @@
 "use client"
 import { Poppins } from 'next/font/google';
 import ProjectsCategory from '@/app/components/ProjectsCategory';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import ProjectsList from '../components/ProjectsList';
 
 const poppins = Poppins({
@@ -10,71 +10,27 @@ const poppins = Poppins({
     display: 'swap'
 })
 
-const projects = [
-    {
-        _id: 1,
-        title: 'Fresh Leaf',
-        category: 'Case Study',
-        img: '/fresh-leaf.jpg'
-    },
-    {
-        _id: 2,
-        title: 'Case Study 2',
-        category: 'Case Study',
-        img: '/fresh-leaf.jpg'
-    },
-    {
-        _id: 3,
-        title: 'Case Study 3',
-        category: 'Case Study',
-        img: '/fresh-leaf.jpg'
-    },
-    {
-        _id: 4,
-        title: 'Web Ui 1',
-        category: 'Web',
-        img: '/fresh-leaf.jpg'
-    },
-    {
-        _id: 5,
-        title: 'Web Ui 2',
-        category: 'Web',
-        img: '/fresh-leaf.jpg'
-    },
-    {
-        _id: 6,
-        title: 'Web Ui 3',
-        category: 'Web',
-        img: '/fresh-leaf.jpg'
-    },
-    {
-        _id: 7,
-        title: 'Food App',
-        category: 'App',
-        img: '/food-app.jpg'
-    },
-    {
-        _id: 8,
-        title: 'App Ui 2',
-        category: 'App',
-        img: '/fresh-leaf.jpg'
-    },
-    {
-        _id: 9,
-        title: 'App Ui 3',
-        category: 'App',
-        img: '/fresh-leaf.jpg'
-    },
-]
-
-const uniqueCategories = [...new Set(projects.map(project => project.category))];
-
-const allCategories = ['All', ...uniqueCategories];
-
 const Projects = () => {
 
     const [selectedCategory, setSelectedCategory] = useState('All');
+    const [projects, setProjects] = useState([]);
     const [loading, setLoading] = useState(false);
+
+    useEffect(() => {
+        const fetchProjects = async () => {
+            const url = '/api/project-route'
+            const res = await fetch(url);
+            const projectsData = await res.json();
+            setProjects(projectsData.projects);
+            console.log(projectsData);
+        };
+
+        fetchProjects();
+    }, []);
+
+    const uniqueCategories = [...new Set(projects.map(project => project.category))];
+
+    const allCategories = ['All', ...uniqueCategories];
 
     const filteredProjects =
         selectedCategory === 'All'
