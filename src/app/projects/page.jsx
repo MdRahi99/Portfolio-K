@@ -22,7 +22,6 @@ const Projects = () => {
             const res = await fetch(url);
             const projectsData = await res.json();
             setProjects(projectsData.projects);
-            console.log(projectsData);
         };
 
         fetchProjects();

@@ -1,15 +1,15 @@
 import db from '@/utils/db';
-import Project from '@/models/project';
 import { NextResponse } from 'next/server';
+import Skill from '@/models/skills';
 
-// Get Project
+// Get Skills
 export async function GET(req, res) {
     try {
         await db();
-        const projects = await Project.find();
+        const skills = await Skill.find();
 
         return NextResponse.json({
-            projects,
+            skills,
             message: 'Retrieved Successfully!'
         }, {
             status: 200
@@ -23,13 +23,13 @@ export async function GET(req, res) {
     }
 }
 
-// Post Project
+// Post Skills
 export async function POST(req, res) {
     try {
         const body = await req.json();
         await db();
 
-        await Project.create(body);
+        await Skill.create(body);
         return NextResponse.json({
             message: 'Add Successfully!'
         },
