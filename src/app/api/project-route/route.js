@@ -2,6 +2,7 @@ import db from '@/utils/db';
 import Project from '@/models/project';
 import { NextResponse } from 'next/server';
 
+// Get
 export async function GET(req, res) {
     try {
         await db();
@@ -22,7 +23,7 @@ export async function GET(req, res) {
     }
 }
 
-
+// Post
 export async function POST(req, res) {
     try {
         const body = await req.json();
