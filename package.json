@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@react-icons/all-files": "^4.1.0",
+    "mongodb": "^6.3.0",
+    "mongoose": "^8.0.3",
     "next": "14.0.4",
     "npm": "^10.2.5",
     "react": "^18",
