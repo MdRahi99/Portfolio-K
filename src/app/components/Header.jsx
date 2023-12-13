@@ -11,12 +11,12 @@ import { UserContext } from '../contexts/UserProvider';
 
 const Header = () => {
 
-    const { data } = useContext(UserContext);
+    const { user } = useContext(UserContext);
 
     return (
         <>
             {
-                data ?
+                user?.email ?
                 'Admin'
             :
                     <div className="drawer flex items-center justify-end lg:justify-start">

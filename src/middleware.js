@@ -21,7 +21,6 @@ export function middleware(request) {
 // See "Matching Paths" below to learn more
 export const config = {
   matcher: [
-    '/',
     '/admin/:path*',
     '/login',
     '/signup',

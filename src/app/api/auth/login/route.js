@@ -41,6 +41,7 @@ export async function POST(req, res) {
         return response;
     }
     catch (e) {
+        console.log(e);
         return NextResponse.json({
             message: 'Server Error, Please Try Again!'
         },

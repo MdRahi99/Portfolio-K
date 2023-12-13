@@ -10,14 +10,14 @@ export const UserContext = createContext();
 
 const UserProvider = ({ children }) => {
   const router = useRouter();
-  const [data, setData] = useState(null);
+  const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const res = await axios.get('/api/user-info');
-        setData(res.data.data);
+        setUser(res.data.data);
       } catch (error) {
         console.error('Error fetching user details:', error);
       } finally {
@@ -28,9 +28,34 @@ const UserProvider = ({ children }) => {
     fetchData();
   }, []);
 
+  const login = async (email, password) => {
+    try {
+      const res = await axios.post('/api/auth/login', { email, password });
+      setUser(res.data.data);
+      toast.success('Login Successful');
+      router.push('/admin');
+    } catch (error) {
+      console.log(error.message);
+      toast.error(error.message);
+    }
+  };
+
+  const signup = async (name, email, password) => {
+    try {
+      const res = await axios.post('/api/auth/signup', { name, email, password });
+      setUser(res.data.savedUser);
+      toast.success('Signup Successful');
+      router.push('/login'); 
+    } catch (error) {
+      console.log(error.message);
+      toast.error(error.message);
+    }
+  };
+
   const logout = async () => {
     try {
       await axios.get('/api/auth/logout');
+      setUser(null);
       toast.success('Logout Successful');
       router.push('/login');
     } catch (error) {
@@ -39,13 +64,12 @@ const UserProvider = ({ children }) => {
     }
   };
 
-  // Wait until data is fetched before providing the context
   if (loading) {
     return <Loading />;
   }
 
   return (
-    <UserContext.Provider value={{ data, logout }}>
+    <UserContext.Provider value={{ user, login, signup, logout }}>
       {children}
     </UserContext.Provider>
   );
