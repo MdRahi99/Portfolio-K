@@ -19,7 +19,7 @@ const Admin = () => {
         try{
             await axios.get('/api/auth/logout')
             toast.success('Logout Successful')
-            router.push('/admin/login')
+            router.push('/login')
         }
         catch(error){
             console.log(error.message);
