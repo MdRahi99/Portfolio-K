@@ -35,8 +35,7 @@ export async function POST(req, res) {
 
         response.cookies.set('token', token, {
             httpOnly: true,
-            secure: true,
-            domain: 'khadija-tut-tahera.vercel.app'
+            secure: true
         });
 
         return response;
