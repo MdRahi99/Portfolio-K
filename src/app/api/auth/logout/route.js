@@ -6,16 +6,21 @@ export async function GET() {
             message: 'Logout Successful',
             success: true
         });
-        response.cookies.set("token", "", {
+
+        // Set the same path used when creating the cookie
+        const cookieOptions = {
             httpOnly: true,
             // secure: true,
-            expires: new Date(0) 
-        });
+            expires: new Date(0),
+            path: '/' // Set the correct path here
+        };
+
+        response.cookies.set("token", "", cookieOptions);
         return response;
-    }
-    catch (error) {
+    } catch (error) {
         return NextResponse.json(
             { error: error.message },
-            { status: 500 })
+            { status: 500 }
+        );
     }
-};
+}
