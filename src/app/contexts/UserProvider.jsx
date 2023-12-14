@@ -53,8 +53,6 @@ const UserProvider = ({ children }) => {
   const logout = async () => {
     try {
       await axios.get('/api/auth/logout');
-      const expirationTime = new Date();
-      document.cookie = `token=; expires=${expirationTime.toUTCString()}; path=/`;
       setUser(null);
       router.push('/login');
     } catch (error) {
