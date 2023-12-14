@@ -19,7 +19,7 @@ const poppins = Poppins({
 
 const AdminHeader = () => {
 
-    const { user, logout } = useContext(UserContext);
+    const { user, logout} = useContext(UserContext);
 
     return (
         <>
@@ -34,7 +34,7 @@ const AdminHeader = () => {
                             </label>
                         </div>
                         <div className="flex-none hidden lg:block">
-                            <h1 className='text-2xl font-bold ml-6 mb-4'>{user.name}</h1>
+                            <h1 className='text-2xl font-bold ml-6 mb-4'>{user?.name}</h1>
                             <ul className="menu flex gap-2 menu-vertical">
                                 <li><Link href='/admin'>Home</Link></li>
                                 <li><Link href='/admin/add-project'>Add Project</Link></li>

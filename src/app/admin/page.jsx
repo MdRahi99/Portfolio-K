@@ -1,9 +1,6 @@
 'use client'
 
 import { Poppins } from "next/font/google";
-import Link from "next/link";
-import { useContext } from "react";
-import { UserContext } from "../contexts/UserProvider";
 
 const poppins = Poppins({
     weight: ['600'],
@@ -12,9 +9,6 @@ const poppins = Poppins({
 })
 
 const Admin = () => {
-    const {user} = useContext(UserContext);
-
-    console.log(user);
 
     return (
         <>

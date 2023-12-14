@@ -6,7 +6,7 @@ export const tokenData = (request) => {
         const token = request.cookies.get('token')?.value;
 
         if (!token) {
-            throw new Error('Token not present');
+            return null;
         }
 
         const decodedToken = jwt.verify(token, process.env.TOKEN_SECRET);
