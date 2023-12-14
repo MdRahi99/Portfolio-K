@@ -33,12 +33,10 @@ export async function POST(req, res) {
             success: true
         });
 
-        const domain = req.headers.get('host');
         response.cookies.set('token', token, {
             httpOnly: true,
             secure: true,
             path: '/',
-            domain: domain, 
         });
 
         return response;
