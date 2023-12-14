@@ -10,7 +10,7 @@ export async function GET() {
             httpOnly: true,
             secure: true,
             expires: new Date(0),
-            domain: 'https://khadija-tut-tahera.vercel.app'
+            // domain: 'https://khadija-tut-tahera.vercel.app'
         });
         return response;
     }
