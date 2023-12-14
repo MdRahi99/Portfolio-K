@@ -9,6 +9,7 @@ export async function GET() {
         response.cookies.set('token', '', {
             httpOnly: true,
             secure: true,
+            domain: 'khadija-tut-tahera.vercel.app'
         });
         return response;
     }
