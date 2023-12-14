@@ -24,5 +24,6 @@ export const config = {
     '/admin/:path*',
     '/login',
     '/signup',
+    '/logout'
   ]
 }
