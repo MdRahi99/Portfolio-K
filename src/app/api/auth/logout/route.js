@@ -10,9 +10,10 @@ export async function GET() {
         // Set the same path used when creating the cookie
         const cookieOptions = {
             httpOnly: true,
-            // secure: true,
+            secure: true,
             expires: new Date(0),
-            path: '/' // Set the correct path here
+            path: '/',
+            domain: 'khadija-tut-tahera.vercel.app',
         };
 
         response.cookies.set("token", "", cookieOptions);
