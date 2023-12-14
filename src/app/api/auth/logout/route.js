@@ -6,12 +6,9 @@ export async function GET() {
             message: 'Logout Successful',
             success: true
         });
-        response.cookies.delete('token');
         response.cookies.set('token', '', {
             httpOnly: true,
-            secure: true,
-            expires: new Date(0),
-            // domain: 'https://khadija-tut-tahera.vercel.app'
+            secure: true
         });
         return response;
     }
