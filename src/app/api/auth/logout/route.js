@@ -13,6 +13,7 @@ export async function GET() {
             secure: true,
             expires: new Date(0),
             path: '/',
+            domain: '.vercel.app', 
         };
 
         response.cookies.set("token", "", cookieOptions);

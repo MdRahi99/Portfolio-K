@@ -37,6 +37,7 @@ export async function POST(req, res) {
             httpOnly: true,
             path: '/',
             secure: true,
+            domain: '.vercel.app', 
         });
 
         return response;
