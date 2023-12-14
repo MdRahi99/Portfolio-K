@@ -35,7 +35,7 @@ export async function POST(req, res) {
 
         response.cookies.set('token', token, {
             httpOnly: true,
-            secure: true
+            // secure: true
         });
 
         return response;
