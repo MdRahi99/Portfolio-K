@@ -44,7 +44,7 @@ const UserProvider = ({ children }) => {
       const res = await axios.post('/api/auth/signup', { name, email, password });
       setUser(res.data.savedUser);
       await logout();
-      router.push('/login'); 
+      router.push('/login');
     } catch (error) {
       console.log(error.message);
     }
@@ -53,6 +53,8 @@ const UserProvider = ({ children }) => {
   const logout = async () => {
     try {
       await axios.get('/api/auth/logout');
+      const expirationTime = new Date();
+      document.cookie = `token=; expires=${expirationTime.toUTCString()}; path=/`;
       setUser(null);
       router.push('/login');
     } catch (error) {
