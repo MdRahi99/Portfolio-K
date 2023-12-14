@@ -38,7 +38,7 @@ export async function POST(req, res) {
             secure: true,
             path: '/',
             secure: true,
-            domain: '.vercel.app', 
+            domain: '.khadija-tut-tahera.vercel.app', 
         });
 
         return response;
