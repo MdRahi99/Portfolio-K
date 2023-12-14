@@ -4,7 +4,7 @@ const nextConfig = {
         serverComponentsExternalPackages: ["mongoose"],
     },
     images: {
-        domains: ['surl.li']
+        domains: ['surl.li', 'i.ibb.co']
     }
 }
 
