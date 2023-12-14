@@ -6,6 +6,7 @@ export async function GET() {
             message: 'Logout Successful',
             success: true
         });
+        response.cookies.delete('token');
         response.cookies.set('token', '', {
             httpOnly: true,
             secure: true,

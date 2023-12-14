@@ -23,7 +23,6 @@ export const config = {
   matcher: [
     '/admin/:path*',
     '/login',
-    '/signup',
-    '/logout'
+    '/signup'
   ]
 }
