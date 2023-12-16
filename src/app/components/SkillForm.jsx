@@ -1,6 +1,7 @@
 'use client'
 
 import { Poppins, Preahvihear } from "next/font/google";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 const preahvihear = Preahvihear({
     weight: ['400'],
@@ -14,6 +15,7 @@ const poppins = Poppins({
 })
 
 const SkillForm = () => {
+    const router = useRouter();
     const [skill, setSkill] = useState({
         title: "",
         image: "",
@@ -47,6 +49,7 @@ const SkillForm = () => {
                     image: "",
                 })
                 setStatus('success');
+                router.push('/admin/all-skills')
             } else {
                 setStatus('error');
             }

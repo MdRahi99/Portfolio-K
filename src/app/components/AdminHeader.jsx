@@ -40,6 +40,7 @@ const AdminHeader = () => {
                                 <li><Link href='/admin/add-project'>Add Project</Link></li>
                                 <li><Link href='/admin/add-skill'>Add Skill</Link></li>
                                 <li><Link href='/admin/all-projects'>All Projects</Link></li>
+                                <li><Link href='/admin/all-skills'>All Skills</Link></li>
                                 <li><button onClick={logout} className={`${poppins.className} px-3 py-1 bg-sky-700 hover:bg-sky-500 text-white mt-4`}>Logout</button></li>
                             </ul>
 
@@ -59,6 +60,7 @@ const AdminHeader = () => {
                         <li><Link href='/admin/add-project'>Add Project</Link></li>
                         <li><Link href='/admin/add-skill'>Add Skill</Link></li>
                         <li><Link href='/admin/all-projects'>All Projects</Link></li>
+                        <li><Link href='/admin/all-skills'>All Skills</Link></li>
                         <li><button onClick={logout} className={`${poppins.className} px-3 py-1 bg-sky-700 hover:bg-sky-500 text-white mt-4`}>Logout</button></li>
                         <div className='flex items-center gap-8 ml-4 mt-6'>
                             <FaFacebook className='text-2xl hover:text-[#cccbcb]' />
