@@ -16,7 +16,7 @@ const AllProjects = () => {
     const [projectData, setProjectData] = useState([]);
     useEffect(() => {
         const fetchProjectsData = async () => {
-            const url = '/api/all-projects'
+            const url = '/api/project-route'
             const res = await axios.get(url);
             setProjectData(res.data.projects);
         };
