@@ -1,10 +1,11 @@
 import {AiFillDelete} from '@react-icons/all-files/ai/AiFillDelete';
+import axios from 'axios';
+import { useState } from 'react';
+import Loading from '../loading';
 
-const AdminProjectsList = ({projectData}) => {
+const AdminProjectsList = ({projectData, handleDelete}) => {
 
-    const handleDelete = (id) => {
-        console.log(id);
-    };
+    console.log(projectData);
 
     return (
         <div className="overflow-x-auto mt-12">

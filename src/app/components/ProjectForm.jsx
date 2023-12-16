@@ -1,6 +1,7 @@
 'use client'
 
 import { Poppins, Preahvihear } from "next/font/google";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 const preahvihear = Preahvihear({
     weight: ['400'],
@@ -14,6 +15,7 @@ const poppins = Poppins({
 })
 
 const ProjectForm = () => {
+    const router = useRouter();
     const [project, setProject] = useState({
         title: "",
         category: "",
@@ -53,6 +55,7 @@ const ProjectForm = () => {
                     project_url: ""
                 })
                 setStatus('success');
+                router.push('/admin/all-projects')
             } else {
                 setStatus('error');
             }
