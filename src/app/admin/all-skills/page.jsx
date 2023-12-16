@@ -63,7 +63,7 @@ const AllSkills = () => {
     return (
         <>
             <div className='py-20 px-8 lg:px-24 text-white'>
-                <h1 className={`text-2xl text-center lg:text-left ${poppins.className}`}>All Projects</h1>
+                <h1 className={`text-2xl text-center lg:text-left ${poppins.className}`}>All Skills</h1>
 
                 <AdminSkillsList
                     skillData={skillData}

@@ -7,8 +7,8 @@ import UserProvider from './contexts/UserProvider'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Portfolio',
-  description: 'My Portfolio',
+  title: 'Khadija Tut Tahera',
+  description: "Khadija Tut Tahera's Portfolio",
 }
 
 export default function RootLayout({ children }) {
