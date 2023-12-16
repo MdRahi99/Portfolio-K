@@ -17,9 +17,8 @@ const AllProjects = () => {
     useEffect(() => {
         const fetchProjectsData = async () => {
             const url = '/api/all-projects'
-            const res = await fetch(url);
-            const data = await res.json();
-            setProjectData(data.projects);
+            const res = await axios.get(url);
+            setProjectData(res.data.projects);
         };
 
         fetchProjectsData();
