@@ -5,7 +5,7 @@ import { Poppins, Preahvihear } from 'next/font/google';
 import { useState, useEffect, useContext } from 'react';
 import Loading from '@/app/loading';
 import toast, { Toaster } from 'react-hot-toast';
-import { UserContext } from '../contexts/UserProvider';
+import { UserContext } from '../../contexts/UserProvider';
 
 const preahvihear = Preahvihear({
     weight: ['400'],

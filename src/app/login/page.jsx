@@ -100,12 +100,12 @@ const Login = () => {
                         )}
                     </div>
 
-                    <div>
+                    {/* <div>
                         <h1 className='text-sm text-center'>
                             Have not any Account ?
                             <Link href='/signup' className={`${poppins.className} hover:text-[#eae8e8]`}> Sign Up</Link>
                         </h1>
-                    </div>
+                    </div> */}
                 </form>
             </div>
         </>
