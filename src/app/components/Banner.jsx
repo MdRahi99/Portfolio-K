@@ -48,7 +48,7 @@ const Banner = () => {
                     className={`flex p-2 border-2 border-[#FF6464] w-1/2 justify-center bg-[#FF6464] hover:bg-[#f29494] hover:border-[#f29494] text-white ${poppins.className}`} >
                         Hire Me
                     </Link>
-                    <Link href='https://drive.google.com/file/d/1p4vgJFC-5zq22m0ZaL5n7P6nqpYnkRS4/view?usp=drive_link' 
+                    <Link href='/https://drive.google.com/file/d/1p4vgJFC-5zq22m0ZaL5n7P6nqpYnkRS4/view?usp=drive_link' 
                     target='_blank' className={`flex p-2 w-1/2 justify-center border-2 hover:bg-[#FF6464] hover:border-[#FF6464] border-white text-white ${poppins.className}`}>Download Resume</Link>
                 </div>
             </div>
