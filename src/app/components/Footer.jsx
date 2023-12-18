@@ -1,27 +1,22 @@
 import { MdLocationOn } from '@react-icons/all-files/md/MdLocationOn';
-import { FaPhone } from '@react-icons/all-files/fa/FaPhone';
 import { MdEmail } from '@react-icons/all-files/md/MdEmail';
 
 const Footer = () => {
   return (
     <>
-      <div className='py-8 px-8 lg:px-24 bg-[#00A8CC] text-white'>
-        <div className='flex flex-col lg:flex-row lg:items-center gap-4 justify-between'>
-          <div className='flex items-center gap-2'>
-            <MdLocationOn />
+      <div className='py-8 px-8 flex lg:flex-row flex-col lg:items-center justify-between bg-[#00A8CC] text-white'>
+        <div className='flex flex-col lg:flex-row lg:items-center gap-8'>
+          <div className='flex gap-2'>
+            <MdLocationOn className='text-2xl' />
             <h1>Dhaka, Bangladesh</h1>
           </div>
-          <div className='flex items-center gap-2'>
-            <FaPhone />
-            <h1>+88019********</h1>
-          </div>
-          <div className='flex items-center gap-2'>
-            <MdEmail />
+          <div className='flex gap-2'>
+            <MdEmail className='text-2xl' />
             <h1>khadijatuttahera15@gmail.com</h1>
           </div>
         </div>
-        <div className='mt-12 lg:text-center w-full'>
-          <p>Copyright @ 2023-All Right Reserved By Khadija</p>
+        <div className='lg:mt-0 mt-6'>
+          <p>©2023 - All Rights Reserved By <span className='font-bold'>Khadija Tut Tahera</span></p>
         </div>
       </div>
     </>

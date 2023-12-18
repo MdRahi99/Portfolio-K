@@ -1,3 +1,4 @@
+'use client'
 import { Preahvihear, Poppins } from 'next/font/google';
 import Image from 'next/image';
 import logo from '../../../public/banner_logo.png';
@@ -13,6 +14,16 @@ const poppins = Poppins({
     subsets: ['latin'],
     display: 'swap'
 })
+
+const handleDownload = () => {
+    const cvUrl = '/path/to/your_cv.pdf';
+    const downloadLink = document.createElement('a');
+    downloadLink.href = cvUrl;
+    downloadLink.download = 'your_cv.pdf';
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+    document.body.removeChild(downloadLink);
+  };
 
 
 const Banner = () => {
@@ -37,7 +48,8 @@ const Banner = () => {
                     className={`flex p-2 border-2 border-[#FF6464] w-1/2 justify-center bg-[#FF6464] hover:bg-[#f29494] hover:border-[#f29494] text-white ${poppins.className}`} >
                         Hire Me
                     </Link>
-                    <button className={`flex p-2 w-1/2 justify-center border-2 hover:bg-[#FF6464] hover:border-[#FF6464] border-white text-white ${poppins.className}`}>Download CV</button>
+                    <Link href='https://drive.google.com/file/d/1p4vgJFC-5zq22m0ZaL5n7P6nqpYnkRS4/view?usp=drive_link' 
+                    target='_blank' className={`flex p-2 w-1/2 justify-center border-2 hover:bg-[#FF6464] hover:border-[#FF6464] border-white text-white ${poppins.className}`}>Download Resume</Link>
                 </div>
             </div>
         </>
