@@ -45,6 +45,7 @@ const UserHeader = () => {
                         <li><Link href='/process'>Work Process</Link></li>
                         <li><Link href='/expertise'>Expertise</Link></li>
                         <li><Link href='/contact'>Contact</Link></li>
+                        {/* Social Links */}
                         <div className='flex items-center gap-8 ml-4 mt-6'>
                             <FaFacebook className='text-2xl hover:text-[#cccbcb]' />
                             <FaBehance className='text-2xl hover:text-[#cccbcb]' />
