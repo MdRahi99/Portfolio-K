@@ -19,7 +19,7 @@ const poppins = Poppins({
 
 const AdminHeader = () => {
 
-    const { user, logout} = useContext(UserContext);
+    const { user, logout } = useContext(UserContext);
 
     return (
         <>
@@ -45,9 +45,9 @@ const AdminHeader = () => {
                             </ul>
 
                             <div className='flex items-center gap-8 ml-6 mt-3'>
-                                <FaFacebook className='text-2xl hover:text-[#cccbcb]' />
-                                <FaBehance className='text-2xl hover:text-[#cccbcb]' />
-                                <FaLinkedin className='text-2xl hover:text-[#cccbcb]' />
+                                <Link href='https://www.facebook.com/Khadijatuttahara/' target='_blank'><FaFacebook className='text-2xl hover:text-[#cccbcb]' /></Link>
+                                <Link href='https://www.behance.net/khadijatahera' target='_blank'><FaBehance className='text-2xl hover:text-[#cccbcb]' /></Link>
+                                <Link href='https://www.linkedin.com/in/khadija-tut-tahera-0117b0212/' target='_blank'><FaLinkedin className='text-2xl hover:text-[#cccbcb]' /></Link>
                                 <FaInstagram className='text-2xl hover:text-[#cccbcb]' />
                             </div>
                         </div>
@@ -63,9 +63,9 @@ const AdminHeader = () => {
                         <li><Link href='/admin/all-skills'>All Skills</Link></li>
                         <li><button onClick={logout} className={`${poppins.className} px-3 py-1 bg-sky-700 hover:bg-sky-500 text-white mt-4`}>Logout</button></li>
                         <div className='flex items-center gap-8 ml-4 mt-6'>
-                            <FaFacebook className='text-2xl hover:text-[#cccbcb]' />
-                            <FaBehance className='text-2xl hover:text-[#cccbcb]' />
-                            <FaLinkedin className='text-2xl hover:text-[#cccbcb]' />
+                            <Link href='https://www.facebook.com/Khadijatuttahara/' target='_blank'><FaFacebook className='text-2xl hover:text-[#cccbcb]' /></Link>
+                            <Link href='https://www.behance.net/khadijatahera' target='_blank'><FaBehance className='text-2xl hover:text-[#cccbcb]' /></Link>
+                            <Link href='https://www.linkedin.com/in/khadija-tut-tahera-0117b0212/' target='_blank'><FaLinkedin className='text-2xl hover:text-[#cccbcb]' /></Link>
                             <FaInstagram className='text-2xl hover:text-[#cccbcb]' />
                         </div>
                     </ul>
