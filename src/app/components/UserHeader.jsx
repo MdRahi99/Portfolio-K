@@ -29,9 +29,9 @@ const UserHeader = () => {
                             </ul>
 
                             <div className='flex items-center gap-8 ml-6 mt-3'>
-                                <FaFacebook className='text-2xl hover:text-[#cccbcb]' />
-                                <FaBehance className='text-2xl hover:text-[#cccbcb]' />
-                                <FaLinkedin className='text-2xl hover:text-[#cccbcb]' />
+                                <Link href='https://www.facebook.com/Khadijatuttahara/' target='_blank'><FaFacebook className='text-2xl hover:text-[#cccbcb]' /></Link>
+                                <Link href='https://www.behance.net/khadijatahera' target='_blank'><FaBehance className='text-2xl hover:text-[#cccbcb]' /></Link>
+                                <Link href='https://www.linkedin.com/in/khadija-tut-tahera-0117b0212/' target='_blank'><FaLinkedin className='text-2xl hover:text-[#cccbcb]' /></Link>
                                 <FaInstagram className='text-2xl hover:text-[#cccbcb]' />
                             </div>
                         </div>
@@ -47,9 +47,9 @@ const UserHeader = () => {
                         <li><Link href='/contact'>Contact</Link></li>
                         {/* Social Links */}
                         <div className='flex items-center gap-8 ml-4 mt-6'>
-                            <FaFacebook className='text-2xl hover:text-[#cccbcb]' />
-                            <FaBehance className='text-2xl hover:text-[#cccbcb]' />
-                            <FaLinkedin className='text-2xl hover:text-[#cccbcb]' />
+                            <Link href='https://www.facebook.com/Khadijatuttahara/' target='_blank'><FaFacebook className='text-2xl hover:text-[#cccbcb]' /></Link>
+                            <Link href='https://www.behance.net/khadijatahera' target='_blank'><FaBehance className='text-2xl hover:text-[#cccbcb]' /></Link>
+                            <Link href='https://www.linkedin.com/in/khadija-tut-tahera-0117b0212/' target='_blank'><FaLinkedin className='text-2xl hover:text-[#cccbcb]' /></Link>
                             <FaInstagram className='text-2xl hover:text-[#cccbcb]' />
                         </div>
                     </ul>
