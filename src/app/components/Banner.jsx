@@ -51,10 +51,10 @@ const Banner = () => {
             visual Design, Wireframing and prototyping, High Fidelity Design.
           </p>
         </div>
-        <div className="w-full flex items-center gap-8 lg:gap-6 mt-10">
+        <div className="w-full flex items-center gap-4 lg:gap-6 mt-10">
           <Link
             href="/contact"
-            className={`flex p-2 border-2 rounded-lg border-sky-600 w-full lg:w-1/3 justify-center bg-sky-600 hover:bg-sky-700 hover:border-sky-700 text-white ${poppins.className}`}
+            className={`flex p-2 rounded-lg w-full lg:w-1/3 justify-center bg-sky-600 hover:bg-sky-700 text-white ${poppins.className}`}
           >
             Hire Me
           </Link>
