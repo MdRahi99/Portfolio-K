@@ -47,8 +47,7 @@ const Banner = () => {
             />
           </div>
           <p className={`${poppins.className} text-[#D3D6DA] text-justify`}>
-            Hey! I am khadija Tut Tahera. Professional UI/UX designer. Expert in
-            visual Design, Wireframing and prototyping, High Fidelity Design, Collaboration with Developers.
+            Hey! I am khadija Tut Tahera. Professional UI/UX designer. Expert in User Research, Visual design, Wireframing, Prototyping, High- Fidelity Design and collaboration with developer.
           </p>
         </div>
         <div className="w-full flex items-center gap-4 lg:gap-6 mt-10">

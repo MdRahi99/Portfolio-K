@@ -38,7 +38,7 @@ const Expertise = () => {
             return (
                 <div key={data?._id} className="flex items-center gap-3 rounded-lg bg-white opacity-90 text-black px-4 py-2 h-14">
                   <Image
-                    className="rounded-lg h-10 w-10"
+                    className="rounded-lg h-8 w-8"
                     src={data.image}
                     alt="Icon"
                     width={900}
