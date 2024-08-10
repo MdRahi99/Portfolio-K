@@ -64,7 +64,7 @@ const Banner = () => {
             target="_blank"
             className={`lg:hidden flex px-4 text-sm py-2 w-full justify-center border-2 rounded-lg hover:bg-sky-600 hover:border-sky-600 border-white text-white ${poppins.className}`}
           >
-            Download Resume
+            Resume
           </Link>
         </div>
       </div>
