@@ -29,11 +29,11 @@ const handleDownload = () => {
 const Banner = () => {
     return (
         <>
-            <div className='py-20 px-8 lg:px-24 text-white my-12'>
-                <div className='flex flex-col gap-8'>
-                    <h1 className={`${preahvihear.className} text-3xl lg:text-left text-center`}>Khadija Tut Tahera</h1>
-                    <div className='flex items-center lg:justify-start justify-center gap-2'>
-                        <h3 className={`${poppins.className} text-2xl`}>UI/UX Designer</h3>
+            <div className=''>
+                <div className='flex flex-col gap-2'>
+                    <h1 className={`${preahvihear.className} text-3xl`}>Khadija Tut Tahera</h1>
+                    <div className='flex items-center'>
+                        <h3 className={`${poppins.className} text-lg opacity-90`}>UI/UX Designer</h3>
                         <Image
                             className='mt-5'
                             src={logo}
@@ -41,15 +41,15 @@ const Banner = () => {
                             height='48'
                             width='48' />
                     </div>
-                    <p className={`${poppins.className} text-[#D3D6DA] text-justify`}>Hey! I am khadija Tut Tahera. Professional UI/UX designer. Expert in visual Design, Wireframing and prototyping, High Fidelity Design.</p>
+                    <p className={`${poppins.className} lg:w-3/4 text-[#D3D6DA] text-justify`}>Hey! I am khadija Tut Tahera. Professional UI/UX designer. Expert in visual Design, Wireframing and prototyping, High Fidelity Design.</p>
                 </div>
-                <div className='w-full flex items-center gap-3 lg:gap-6 mt-10'>
+                <div className='w-full flex items-center gap-8 lg:gap-6 mt-10'>
                     <Link href='/contact'
-                    className={`flex p-2 border-2 border-[#FF6464] w-1/2 justify-center bg-[#FF6464] hover:bg-[#f29494] hover:border-[#f29494] text-white ${poppins.className}`} >
+                    className={`flex p-2 border-2 rounded-lg border-sky-600 w-full lg:w-1/3 justify-center bg-sky-600 hover:bg-sky-700 hover:border-sky-700 text-white ${poppins.className}`} >
                         Hire Me
                     </Link>
                     <Link href='https://drive.google.com/file/d/1p4vgJFC-5zq22m0ZaL5n7P6nqpYnkRS4/view?usp=drive_link' 
-                    target='_blank' className={`flex p-2 w-1/2 justify-center border-2 hover:bg-[#FF6464] hover:border-[#FF6464] border-white text-white ${poppins.className}`}>Download Resume</Link>
+                    target='_blank' className={`flex p-2 w-full lg:w-1/3 justify-center border-2 rounded-lg hover:bg-sky-600 hover:border-sky-600 border-white text-white ${poppins.className}`}>Download Resume</Link>
                 </div>
             </div>
         </>

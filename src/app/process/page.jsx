@@ -43,14 +43,15 @@ const processData = [
 const Process = () => {
     return (
         <>
-            <div className='py-20 px-8 lg:px-24 text-white'>
-                <h1 className={`text-2xl text-center lg:text-left ${poppins.className}`}>Work Process</h1>
-                <div className='grid grid-cols-1 lg:grid-cols-3 justify-between gap-10 mt-16'>
+            <div className=''>
+                <h1 className={`text-2xl text-left ${poppins.className}`}>Work Process</h1>
+                <div className="h-[2px] rounded-lg bg-sky-600 mt-2 w-16"></div>
+                <div className='grid grid-cols-1 lg:grid-cols-3 justify-between gap-4 mt-8'>
                     {
                         processData.map((data, index) => {
                             const { icon, title, description } = data;
-                            return <div key={index} className='gap-2 flex flex-row lg:flex-col'>
-                                <div className='w-1/6 lg:w-full lg:flex justify-center'>
+                            return <div key={index} className='gap-2 flex flex-row lg:flex-col bg-slate-800 p-4 rounded-lg'>
+                                <div className='w-1/6 lg:w-full'>
                                     <Image
                                         src={icon}
                                         alt="Icon"
@@ -58,9 +59,9 @@ const Process = () => {
                                         height={48}
                                     />
                                 </div>
-                                <div className='w-5/6 lg:w-full'>
-                                    <h1 className={`${poppins.className} lg:text-center text-lg mb-4`}>{title}</h1>
-                                    <p className='shadow-sm h-44 w-full p-4 shadow-sky-300 font-extralight'>{description}</p>
+                                <div className='w-full'>
+                                    <h1 className={`${poppins.className} text-lg mb-4`}>{title}</h1>
+                                    <p className='h-24 lg:h-32 w-full font-extralight'>{description}</p>
                                 </div>
                             </div>
                         })

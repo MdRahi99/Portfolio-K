@@ -38,8 +38,9 @@ const Projects = () => {
 
     return (
         <>
-            <div className='py-20 px-8 lg:px-24 text-white'>
-                <h1 className={`text-2xl text-center lg:text-left ${poppins.className}`}>Projects</h1>
+            <div className=''>
+                <h1 className={`text-2xl text-left ${poppins.className}`}>Projects</h1>
+                <div className="h-[2px] rounded-lg bg-sky-600 mt-2 w-16"></div>
                 <div className='flex items-center justify-center gap-12 my-12'>
                     {
                         allCategories.map((data, index) => {

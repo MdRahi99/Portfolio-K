@@ -1,69 +1,57 @@
-'use client'
+"use client";
 
-import { Poppins } from 'next/font/google';
-import Image from 'next/image';
-import { useState, useEffect } from 'react';
+import { Poppins } from "next/font/google";
+import Image from "next/image";
+import { useState, useEffect } from "react";
 
 const poppins = Poppins({
-    weight: ['600'],
-    subsets: ['latin'],
-    display: 'swap'
-})
-
-// const expertiseData = [
-//     {
-//         icon: '/expertise-logo-1.png'
-//     },
-//     {
-//         icon: '/expertise-logo-2.png'
-//     },
-//     {
-//         icon: '/expertise-logo-3.png'
-//     },
-//     {
-//         icon: '/expertise-logo-4.png'
-//     },
-// ]
+  weight: ["600"],
+  subsets: ["latin"],
+  display: "swap",
+});
 
 const Expertise = () => {
+  const [expertiseData, setExpertiseData] = useState([]);
 
-    const [expertiseData, setExpertiseData] = useState([]);
+  useEffect(() => {
+    const fetchSkills = async () => {
+      const url = "/api/expertise-route";
+      const res = await fetch(url);
+      const skillsData = await res.json();
+      setExpertiseData(skillsData.skills);
+    };
 
-    useEffect(() => {
-        const fetchSkills = async () => {
-            const url = '/api/expertise-route'
-            const res = await fetch(url);
-            const skillsData = await res.json();
-            setExpertiseData(skillsData.skills);
-        };
+    fetchSkills();
+  }, []);
 
-        fetchSkills();
-    }, []);
-
-    return (
-        <>
-            <div className='py-20 px-8 lg:px-24 text-white'>
-                <h1 className={`text-2xl text-center lg:text-left ${poppins.className}`}>Expertise</h1>
-                <div className='grid grid-cols-3 lg:grid-cols-4 items-center gap-10 mt-16'>
-                    {
-                        expertiseData.map((data) => {
-                            return <div key={data._id}>
-                                <div className='flex justify-center mx-auto shadow-lg shadow-sky-400 p-2 bg-[#edfcfc] hover:bg-transparent h-16 w-20 rounded-lg'>
-                                    <Image
-                                        className='rounded-lg'
-                                        src={data.image}
-                                        alt="Icon"
-                                        width={60}
-                                        height={60}
-                                    />
-                                </div>
-                            </div>
-                        })
-                    }
+  return (
+    <>
+      <div className="">
+        <h1
+          className={`text-2xl ${poppins.className}`}
+        >
+          Expertise
+        </h1>
+        <div className="h-[2px] rounded-lg bg-sky-600 mt-2 w-16"></div>
+        <div className="grid grid-cols-2 lg:grid-cols-4 items-center gap-8 mt-8">
+          {expertiseData.map((data) => {
+            return (
+                <div key={data?._id} className="flex items-center gap-3 rounded-lg bg-white opacity-90 text-black px-4 py-2 h-14">
+                  <Image
+                    className="rounded-lg h-10 w-10"
+                    src={data.image}
+                    alt="Icon"
+                    width={900}
+                    height={900}
+                  />
+                  <h1 className="font-semibold">{data?.title}</h1>
                 </div>
-            </div>
-        </>
-    );
+            );
+          })}
+        </div>
+      </div>
+    </>
+  );
 };
 
 export default Expertise;

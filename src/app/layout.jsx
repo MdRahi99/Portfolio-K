@@ -17,10 +17,10 @@ export default function RootLayout({ children }) {
       <body className={`${inter.className}`}>
         <UserProvider>
           <div className='flex justify-between items-start'>
-            <div className='w-full lg:w-8/12 min-h-screen'>
+            <div className='w-full lg:w-9/12 min-h-screen py-20 lg:py-12 px-4 lg:px-20 text-white'>
               {children}
             </div>
-            <div className='w-full lg:w-3/12 min-h-fit lg:shadow-lg lg:p-4 lg:shadow-sky-300 fixed right-8 lg:top-24 z-50'>
+            <div className='w-full lg:w-3/12 min-h-fit lg:p-4 fixed right-2 lg:top-24 z-50'>
               <Header />
             </div>
           </div>

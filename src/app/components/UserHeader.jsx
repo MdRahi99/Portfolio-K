@@ -8,13 +8,13 @@ import { FaInstagram } from '@react-icons/all-files/fa/FaInstagram';
 const UserHeader = () => {
     return (
         <>
-            <div className="drawer flex items-center justify-end lg:justify-start">
+            <div className="drawer flex items-center justify-end lg:justify-start bg-slate-800 py-4 rounded-lg">
                 <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
                 <div className="drawer-content flex flex-col">
                     {/* Navbar */}
                     <div className="w-full navbar text-white">
-                        <div className="flex-none lg:hidden">
-                            <label htmlFor="my-drawer-3" aria-label="open sidebar" className="btn btn-square btn-ghost">
+                        <div className="flex-none lg:hidden z-50">
+                            <label htmlFor="my-drawer-3" aria-label="open sidebar" className="text-black bg-white p-2 rounded-lg">
                                 <FaBars />
                             </label>
                         </div>

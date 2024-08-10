@@ -4,7 +4,7 @@ import { MdEmail } from '@react-icons/all-files/md/MdEmail';
 const Footer = () => {
   return (
     <>
-      <div className='py-8 px-8 flex lg:flex-row flex-col lg:items-center justify-between bg-[#00A8CC] text-white'>
+      <div className='py-8 px-8 flex lg:flex-row flex-col lg:items-center justify-between bg-sky-600 text-white'>
         <div className='flex flex-col lg:flex-row lg:items-center gap-8'>
           <div className='flex gap-2'>
             <MdLocationOn className='text-2xl' />
