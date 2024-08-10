@@ -58,6 +58,14 @@ const Banner = () => {
           >
             Hire Me
           </Link>
+
+          <Link
+            href="https://drive.google.com/file/d/1O_siamb8s7LSZwxliPel93kM3xWI3MbM/view?fbclid=IwY2xjawEkcJpleHRuA2FlbQIxMAABHaeRTUEpwKQioy74RrSd61waWlQCltYs60uCNuG16zN3PLnZGLxFS2RmoA_aem_LAZxVMQCPPd08ifHui57yw"
+            target="_blank"
+            className={`lg:hidden flex px-4 text-sm py-2 w-full justify-center border-2 rounded-lg hover:bg-sky-600 hover:border-sky-600 border-white text-white ${poppins.className}`}
+          >
+            Download Resume
+          </Link>
         </div>
       </div>
 
