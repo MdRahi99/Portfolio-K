@@ -29,17 +29,17 @@ const handleDownload = () => {
 const Banner = () => {
     return (
         <>
-            <div className=''>
-                <div className='flex flex-col gap-2'>
+            <div className='py-8'>
+                <div className='flex flex-col gap-4'>
                     <h1 className={`${preahvihear.className} text-3xl`}>Khadija Tut Tahera</h1>
-                    <div className='flex items-center'>
+                    <div className='flex items-center gap-2'>
                         <h3 className={`${poppins.className} text-lg opacity-90`}>UI/UX Designer</h3>
                         <Image
-                            className='mt-5'
+                            className=''
                             src={logo}
                             alt='Banner Logo'
                             height='48'
-                            width='48' />
+                            width='24' />
                     </div>
                     <p className={`${poppins.className} lg:w-3/4 text-[#D3D6DA] text-justify`}>Hey! I am khadija Tut Tahera. Professional UI/UX designer. Expert in visual Design, Wireframing and prototyping, High Fidelity Design.</p>
                 </div>

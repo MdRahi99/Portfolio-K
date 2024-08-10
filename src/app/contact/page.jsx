@@ -17,13 +17,13 @@ const Contact = () => {
             Contact
           </h1>
           <div className="h-[2px] rounded-lg bg-sky-600 mt-2 w-16"></div>
-          <p className="text-sm opacity-80 mt-3 lg:w-[70%]">
+          <p className="text-sm opacity-80 mt-3 lg:w-[60%]">
             Feel free to get in touch with me. I am always open to discussing
             New Projects & Creative ideas
           </p>
         </div>
 
-        <form className="flex flex-col gap-8">
+        <form className="flex flex-col gap-8 w-full lg:w-2/3">
           <div className="flex items-center justify-between gap-8">
             <input
               type="text"
