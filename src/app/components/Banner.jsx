@@ -28,7 +28,7 @@ const handleDownload = () => {
 
 const Banner = () => {
   return (
-    <div className="flex flex-col bg-gradient-to-br from-slate-900 to-sky-900 rounded-lg items-center gap-8 p-8 mt-8 lg:mt-0">
+    <div className="flex flex-col bg-gradient-to-br from-slate-900 to-sky-900 rounded-lg items-center gap-8 p-8">
       <div className="flex items-center justify-between w-full mb-4">
         <Link
           href="/"
@@ -63,11 +63,9 @@ const Banner = () => {
               />
             </div>
             <p
-              className={`${poppins.className} w-full lg:w-2/3 text-[#D3D6DA] text-justify`}
+              className={`${poppins.className} w-full lg:w-4/5 text-[#D3D6DA] text-justify`}
             >
-              Hey! I am Khadija Tut Tahera. Professional UI/UX designer. Expert
-              in User Research, Visual design, Wireframing, Prototyping,
-              High-Fidelity Design and collaboration with developers.
+              Hey, I am khadija Tut Tahera. To work as a UI/UX designer and grow rapidly with increasing responsibilities. Skilled and creative UI/UX Designer with a strong focus on designing visually appealing and user-friendly interfaces. Proficient in wireframing and implementing user-centered design principles.
             </p>
           </div>
           <div className="w-full flex items-center gap-4 lg:gap-6 mt-10">
@@ -92,8 +90,8 @@ const Banner = () => {
           <Image
             src={profileLogo}
             alt="logo"
-            width={260}
-            height={260}
+            width={300}
+            height={300}
             className="rounded-lg border"
           />
         </div>
