@@ -3,7 +3,6 @@
 import axios from 'axios';
 import { useRouter } from 'next/navigation';
 import { createContext, useState, useEffect } from 'react';
-import Loading from '../loading';
 
 export const UserContext = createContext();
 
