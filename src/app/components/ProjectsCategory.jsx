@@ -1,11 +1,7 @@
-const ProjectsCategory = ({ data, setSelectedCategory, setLoading }) => {
+const ProjectsCategory = ({ data, setSelectedCategory }) => {
 
     const handleCategoryClick = category => {
-        setLoading(true);
         setSelectedCategory(category);
-        setTimeout(()=>{
-            setLoading(false)
-        }, 1000)
     };
 
     return (

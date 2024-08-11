@@ -1,65 +1,19 @@
-"use client"
-import { Poppins } from 'next/font/google';
-import ProjectsCategory from '@/app/components/ProjectsCategory';
-import { useState, useEffect } from 'react';
-import ProjectsList from '../components/ProjectsList';
+import React from "react";
+import Projects from "../components/Projects/Projects";
+import { Poppins } from "next/font/google";
 
 const poppins = Poppins({
-    weight: ['600'],
-    subsets: ['latin'],
-    display: 'swap'
-})
+  weight: ["600"],
+  subsets: ["latin"],
+  display: "swap",
+});
 
-const Projects = () => {
-
-    const [selectedCategory, setSelectedCategory] = useState('All');
-    const [projects, setProjects] = useState([]);
-    const [loading, setLoading] = useState(false);
-
-    useEffect(() => {
-        const fetchProjects = async () => {
-            const url = '/api/project-route'
-            const res = await fetch(url);
-            const projectsData = await res.json();
-            setProjects(projectsData.projects);
-        };
-
-        fetchProjects();
-    }, []);
-
-    const uniqueCategories = [...new Set(projects.map(project => project.category))];
-
-    const allCategories = ['All', ...uniqueCategories];
-
-    const filteredProjects =
-        selectedCategory === 'All'
-            ? projects
-            : projects.filter(project => project.category === selectedCategory);
-
-    return (
-        <>
-            <div className=''>
-                <h1 className={`text-2xl text-left ${poppins.className}`}>Projects</h1>
-                <div className="h-[2px] rounded-lg bg-sky-600 mt-2 w-16"></div>
-                <div className='flex items-center justify-center gap-12 my-12'>
-                    {
-                        allCategories.map((data, index) => {
-                            return <ProjectsCategory
-                                key={index}
-                                data={data}
-                                setSelectedCategory={setSelectedCategory}
-                                setLoading={setLoading}
-                            />
-                        })
-                    }
-                </div>
-
-                <ProjectsList
-                    filteredProjects={filteredProjects}
-                    loading={loading} />
-            </div>
-        </>
-    );
+const page = ({projects}) => {
+  return (
+    <div>
+      <Projects projects={projects} poppins={poppins} />
+    </div>
+  );
 };
 
-export default Projects;
+export default page;
