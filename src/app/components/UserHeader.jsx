@@ -65,7 +65,7 @@ const UserHeader = () => {
             </div>
             <div className="drawer-side">
                 <label htmlFor="my-drawer-3" aria-label="close sidebar" className="drawer-overlay"></label>
-                <ul className="p-4 flex flex-col gap-8 w-96 rounded-br-lg h-fit pt-12 bg-slate-900">
+                <ul className="p-4 flex flex-col gap-8 w-80 rounded-br-lg h-fit pt-12 bg-slate-900">
                     {navLinks.map((link) => (
                         <li key={link.href}>
                             <Link 
