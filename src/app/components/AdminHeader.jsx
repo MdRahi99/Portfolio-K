@@ -37,6 +37,7 @@ const AdminHeader = () => {
                             <h1 className='text-2xl font-bold ml-6 mb-4'>{user?.name}</h1>
                             <ul className="menu flex gap-2 menu-vertical">
                                 <li><Link href='/admin'>Home</Link></li>
+                                <li><Link href='/admin/add-profile'>Add Profile</Link></li>
                                 <li><Link href='/admin/add-project'>Add Project</Link></li>
                                 <li><Link href='/admin/add-skill'>Add Skill</Link></li>
                                 <li><Link href='/admin/add-resume'>Add Resume</Link></li>

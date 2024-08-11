@@ -28,21 +28,24 @@ export async function POST(req, res) {
     try {
         const body = await req.json();
         await db();
-
+        
+        // Delete all existing documents in the Profile collection
+        await Profile.deleteMany({});
+        
+        // Create the new document
         await Profile.create(body);
+        
         return NextResponse.json({
-            message: 'Add Successfully!'
-        },
-            {
-                status: 200
-            })
+            message: 'Added Successfully!'
+        }, {
+            status: 200
+        });
     }
     catch (e) {
         return NextResponse.json({
             message: 'Server Error, Please Try Again!'
-        },
-            {
-                status: 500
-            })
+        }, {
+            status: 500
+        });
     }
 }
