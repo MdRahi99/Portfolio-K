@@ -68,13 +68,13 @@ const AdminHeader = () => {
                             </li>
                         </ul>
 
-                        <div className='flex items-center gap-8 ml-6 mt-8'>
+                        {/* <div className='flex items-center gap-8 ml-6 mt-8'>
                             {socialLinks.map((link, index) => (
                                 <Link key={index} href={link.href} target='_blank'>
                                     {link.icon}
                                 </Link>
                             ))}
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>
@@ -100,13 +100,13 @@ const AdminHeader = () => {
                             Logout
                         </button>
                     </li>
-                    <div className='flex items-center gap-8 ml-4 mt-6'>
+                    {/* <div className='flex items-center gap-8 ml-4 mt-6'>
                         {socialLinks.map((link, index) => (
                             <Link key={index} href={link.href} target='_blank'>
                                 {link.icon}
                             </Link>
                         ))}
-                    </div>
+                    </div> */}
                 </ul>
             </div>
         </div>
