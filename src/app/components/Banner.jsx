@@ -28,11 +28,11 @@ const handleDownload = () => {
 
 const Banner = () => {
   return (
-    <div className="flex flex-col bg-slate-800 rounded-lg items-center gap-8 p-8 mt-8 lg:mt-0">
+    <div className="flex flex-col bg-gradient-to-br from-slate-900 to-sky-900 rounded-lg items-center gap-8 p-8 mt-8 lg:mt-0">
       <div className="flex items-center justify-between w-full mb-4">
         <Link
           href="/"
-          className="p-2 rounded-tl-xl rounded-br-xl border-[3px] w-11 h-11 flex items-center justify-center"
+          className="p-2 rounded-tl-xl rounded-br-xl border-[3px] w-11 h-11 hidden lg:flex items-center justify-center"
         >
           <h1 className="font-medium text-2xl">K</h1>
         </Link>

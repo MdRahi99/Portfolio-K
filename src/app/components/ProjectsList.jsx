@@ -13,7 +13,7 @@ const ProjectsList = ({ filteredProjects, loading }) => {
                         {filteredProjects.map(project => {
                             const { _id, title, image, project_url } = project;
                             return <div key={_id} className="rounded-lg bg-slate-800 rounded-tl-3xl">
-                                <div className='h-64 lg:h-52 w-full hover:opacity-30'>
+                                <div className='h-64 w-full hover:opacity-30'>
                                     <Link href={project_url} target="_blank">
                                         <Image
                                             className='rounded-t-lg h-full w-full'

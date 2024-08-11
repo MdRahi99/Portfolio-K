@@ -24,7 +24,7 @@ const UserHeader = () => {
     const path = usePathname();
 
     return (
-        <div className="drawer flex items-center justify-end lg:justify-start lg:bg-slate-800 lg:py-4 rounded-lg">
+        <div className="drawer flex items-center justify-end lg:justify-start">
             <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
             <div className="drawer-content flex flex-col">
                 <div className="w-full navbar text-white">
@@ -65,7 +65,7 @@ const UserHeader = () => {
             </div>
             <div className="drawer-side">
                 <label htmlFor="my-drawer-3" aria-label="close sidebar" className="drawer-overlay"></label>
-                <ul className="p-4 flex flex-col gap-8 w-80 h-fit pt-12 bg-slate-900">
+                <ul className="p-4 flex flex-col gap-8 w-96 rounded-br-lg h-fit pt-12 bg-slate-900">
                     {navLinks.map((link) => (
                         <li key={link.href}>
                             <Link 
