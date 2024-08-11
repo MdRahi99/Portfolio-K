@@ -3,7 +3,6 @@ import { Preahvihear, Poppins } from "next/font/google";
 import Image from "next/image";
 import logo from "../../../public/banner_logo.png";
 import Link from "next/link";
-import profileLogo from "../../../public/logo.jpg";
 
 const preahvihear = Preahvihear({
   weight: ["400"],
@@ -16,17 +15,10 @@ const poppins = Poppins({
   display: "swap",
 });
 
-const handleDownload = () => {
-  const cvUrl = "/path/to/your_cv.pdf";
-  const downloadLink = document.createElement("a");
-  downloadLink.href = cvUrl;
-  downloadLink.download = "your_cv.pdf";
-  document.body.appendChild(downloadLink);
-  downloadLink.click();
-  document.body.removeChild(downloadLink);
-};
+const Banner = ({resume, profile}) => {
 
-const Banner = () => {
+  const {name, designation, image, description} = profile;
+  
   return (
     <div className="flex flex-col bg-gradient-to-br from-slate-900 to-sky-900 rounded-lg items-center gap-8 p-8">
       <div className="flex items-center justify-between w-full mb-4">
@@ -37,7 +29,7 @@ const Banner = () => {
           <h1 className="font-medium text-2xl">K</h1>
         </Link>
         <Link
-          href="https://drive.google.com/file/d/1O_siamb8s7LSZwxliPel93kM3xWI3MbM/view?fbclid=IwY2xjawEkcJpleHRuA2FlbQIxMAABHaeRTUEpwKQioy74RrSd61waWlQCltYs60uCNuG16zN3PLnZGLxFS2RmoA_aem_LAZxVMQCPPd08ifHui57yw"
+          href={resume?.url}
           target="_blank"
           className={`hidden lg:flex px-4 text-sm py-2 justify-center border-2 rounded-lg hover:bg-sky-600 hover:border-sky-600 border-white text-white ${poppins.className}`}
         >
@@ -48,11 +40,11 @@ const Banner = () => {
         <div className="col-span-2">
           <div className="flex flex-col gap-4">
             <h1 className={`${preahvihear.className} text-3xl`}>
-              Khadija Tut Tahera
+              {name}
             </h1>
             <div className="flex items-center gap-2">
               <h3 className={`${poppins.className} text-lg opacity-90`}>
-                UI/UX Designer
+                {designation}
               </h3>
               <Image
                 className=""
@@ -65,7 +57,7 @@ const Banner = () => {
             <p
               className={`${poppins.className} w-full lg:w-4/5 text-[#D3D6DA] text-justify`}
             >
-              Hey, I am khadija Tut Tahera. To work as a UI/UX designer and grow rapidly with increasing responsibilities. Skilled and creative UI/UX Designer with a strong focus on designing visually appealing and user-friendly interfaces. Proficient in wireframing and implementing user-centered design principles.
+             {description}
             </p>
           </div>
           <div className="w-full flex items-center gap-4 lg:gap-6 mt-10">
@@ -77,7 +69,7 @@ const Banner = () => {
             </Link>
 
             <Link
-              href="https://drive.google.com/file/d/1O_siamb8s7LSZwxliPel93kM3xWI3MbM/view?fbclid=IwY2xjawEkcJpleHRuA2FlbQIxMAABHaeRTUEpwKQioy74RrSd61waWlQCltYs60uCNuG16zN3PLnZGLxFS2RmoA_aem_LAZxVMQCPPd08ifHui57yw"
+              href={resume?.url}
               target="_blank"
               className={`lg:hidden flex px-4 text-sm py-2 w-full justify-center border-2 rounded-lg hover:bg-sky-600 hover:border-sky-600 border-white text-white ${poppins.className}`}
             >
@@ -88,7 +80,7 @@ const Banner = () => {
 
         <div className="lg:flex col-span-1 justify-end hidden">
           <Image
-            src={profileLogo}
+            src={image}
             alt="logo"
             width={300}
             height={300}
